@@ -7,9 +7,8 @@
 // next to each @TODO you will find tasks that need to be finished
 
 // The variable will change from X to O based on what player turn it is. We need to hold this so we can place an X or O on the board when they're clicked.
-let player1 = 'X'
-let player2 = 'O'
-let currentplayer = player1
+let currentMarker = 'X'
+
 
 
 
@@ -21,7 +20,7 @@ const handleClick = (element) => {
 
   // this uses the "log" method on the "console" to log out the element's id so we can see it with our human eyes
   console.log(`The element you clicked on has an id:  ${element.id}`)
-  element.innerHTML = currentplayer
+  // element.innerHTML = currentMarker
   
   // this next line prevents an X being changed to an O or an O being changed to an X by...
 
@@ -55,7 +54,7 @@ const addMarker = (id) => {
   // .getElementById(id)
   // document
   // .innerHTML 
-  const currentMarker = document.getElementById(id).innerHTML 
+  document.getElementById(id).innerHTML = currentMarker
 
   changeMarker()
 }
