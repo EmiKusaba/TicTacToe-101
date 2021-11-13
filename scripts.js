@@ -108,3 +108,10 @@ const resetBoard = () => {
     squares[i].innerHTML = null
   }
 }
+
+const checkWin = () => {
+  if (horizontalWins() || verticalWins() || diagonalWins())
+  window.alert('player{currentplayer}won!')
+  else
+  changeMarker()
+}
